@@ -21,7 +21,7 @@ function useScrollFadeIn(threshold) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [threshold]);
 
   return isVisible;
 }
