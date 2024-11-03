@@ -1,0 +1,22 @@
+.bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .bottom.logged-in {
+    background-color: rgb(104, 104, 104);
+  }
+  
+  .bottom.logged-out {
+    background-color: #1ea7fd;
+  }
+  
+  .bottom button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
