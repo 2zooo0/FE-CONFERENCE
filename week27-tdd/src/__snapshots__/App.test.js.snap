@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders component correctly 1`] = `
+<p
+  data-testid="p-tag"
+>
+  Edit 
+  <code>
+    src/App.js
+  </code>
+   and save to reload.
+</p>
+`;
