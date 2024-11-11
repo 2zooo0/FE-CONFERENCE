@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방명록</title>
+    <link rel="stylesheet" href="/guestbook.css" />
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>🐯주녕이의 방명록🐯</h1>
+      <!-- 방명록 작성 폼 -->
+       <form action="/guestbook" method="POST">
+        <input type="text" name="author" placeholder="작성자" required/>
+        <textarea name="message" placeholder="내용" required></textarea>
+        <button type="submit">등록</button>
+       </form>
+
+      <h2>방명록 목록</h2>
+      <div class="entries">
+        <!-- 방명록 리스트 -->
+        <% entries.forEach(entry => { %>
+            <div class="entry" data-id="<%= entry._id %>">
+              <div class="entry-header">
+                <div class="author"><%= entry.author %></div>
+                <div class="date"><%= entry.createdAt.toLocaleString() %></div>
+              </div>
+              <div class="message"><%= entry.message %></div>
+              <button class="delete-button">삭제</button>
+            </div>
+            <% }) %>
+      </div>
+    </div>
+    <script src="/guestbook.js"></script>
+  </body>
+</html>
